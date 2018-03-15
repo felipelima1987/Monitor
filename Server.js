@@ -1,18 +1,18 @@
-//var express = require('express');
+var express = require('express');
 var sql = require("mssql");
 var nodemailer = require('nodemailer');
 var autostart = require('node-autostart')
 
 
-//var app = express();
+var app = express();
 
-autostart.enableAutostart('Teste', 'Server.js', 'process.cwd()', function (err) {
-    if(err) console.error(err);    
-    setInterval(Monitoramento, 60000);           
-  })
-//app.get('/', function (req, res) {
+//autostart.enableAutostart('Teste', 'Server.js', 'process.cwd()', function (err) {
+    //if(err) console.error(err);    
+    //setInterval(Monitoramento, 60000);           
+  //})
+app.get('/', function (req, res) {
  
-function Monitoramento(){
+//function Monitoramento(){
     // config for your database
     var config = {
         user: 'althusadmin@dbetv',
@@ -48,10 +48,11 @@ function Monitoramento(){
 
     sql.close();
 }
+);
 
-//var server = app.listen(8080, function () {
-    //console.log('Server is running..');
-//});
+var server = app.listen(8080, function () {
+    console.log('Server is running..');    
+});
 
 function EnviarEmail(){
     
