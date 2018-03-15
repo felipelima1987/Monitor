@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
         database: 'H9J',
         options: {
             encrypt: true
-          }
+          } 
     };
 
     sql.close();
