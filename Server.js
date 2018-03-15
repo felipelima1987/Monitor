@@ -1,10 +1,21 @@
-var express = require('express');
-var app = express();
+//var express = require('express');
+var sql = require("mssql");
+var nodemailer = require('nodemailer');
+var autostart = require('node-autostart')
 
-app.get('/', function (req, res) {
-   
-    var sql = require("mssql");
 
+//var app = express();
+
+autostart.enableAutostart('Teste', 'Server.js', 'process.cwd()', function (err) {
+    if(err) console.error(err);
+    //Main(); 
+    setInterval(Monitoramento, 60000);
+          
+  })
+//app.get('/', function (req, res) {
+
+
+function Monitoramento(){
     // config for your database
     var config = {
         user: 'althusadmin@dbetv',
@@ -32,21 +43,22 @@ app.get('/', function (req, res) {
 
             // send records as a response
             //res.send(recordset);
-            if(recordset.recordset[0].Diferenca > 0)
+            if(recordset.recordset[0].Diferenca == 0)
                 EnviarEmail();                
                 
         });
     });
-});
 
-var server = app.listen(80, function () {
+    sql.close();
+}
+
+//var server = app.listen(8080, function () {
     //console.log('Server is running..');
-});
+//});
 
 function EnviarEmail(){
     
-    var nodemailer = require('nodemailer');
-
+  
     // O primeiro passo é configurar um transporte para este
     // e-mail, precisamos dizer qual servidor será o encarregado
     // por enviá-lo:
