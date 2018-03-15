@@ -11,8 +11,7 @@ autostart.enableAutostart('Teste', 'Server.js', 'process.cwd()', function (err) 
     setInterval(Monitoramento, 60000);           
   })
 //app.get('/', function (req, res) {
-
-
+ 
 function Monitoramento(){
     // config for your database
     var config = {
