@@ -6,7 +6,7 @@ var autostart = require('node-autostart')
 
 //var app = express();
 
-autostart.enableAutostart('Teste', 'Server.js', 'process.cwd()', function (err) {
+autostart.enableAutostart('Servidor', 'Server.js', '/', function (err) {
     if(err) console.error(err);    
     setInterval(Monitoramento, 60000);           
   })
