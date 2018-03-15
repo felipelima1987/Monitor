@@ -1,0 +1,31 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "Script para monitoramento do serviço de integração do banco de dados.",
+  "main": "Server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mssql": "^4.1.0",
+    "nodemailer": "^4.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipelima1987/Monitor.git"
+  },
+  "keywords": [
+    "Monitor",
+    "Email",
+    "SQL"
+  ],
+  "author": "Felipe Alves Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipelima1987/Monitor/issues"
+  },
+  "homepage": "https://github.com/felipelima1987/Monitor#readme"
+}
