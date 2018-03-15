@@ -1,6 +1,9 @@
 {
   "name": "monitor",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.3"
+  },
   "description": "Script para monitoramento do serviço de integração do banco de dados.",
   "main": "Server.js",
   "dependencies": {
