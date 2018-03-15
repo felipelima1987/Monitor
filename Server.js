@@ -50,9 +50,9 @@ function Monitoramento(){
 }
 //);
 
-var server = app.listen(8080, function () {
-    console.log('Server is running..');    
-});
+//var server = app.listen(8080, function () {
+    //console.log('Server is running..');    
+//});
 
 function EnviarEmail(){
     
