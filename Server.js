@@ -12,7 +12,7 @@ var autostart = require('node-autostart')
   //})
 //app.get('/', function (req, res) {
 
-setInterval(Monitoramento, 60000);
+setInterval(Monitoramento, 30000);
 
 function Monitoramento(){
     // config for your database
